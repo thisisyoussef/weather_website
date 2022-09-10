@@ -15,8 +15,9 @@ request({url, json: true}, (error, {body}={})=>{
     const feelslike = current.feelslike;
     const precipitation = current.precip;
     const weatherdescription = current.weather_descriptions[0];
+    console.log(current);
     callback(undefined,{temperature: temperature,
-    feelslike: feelslike, precipitation: precipitation
+    feelslike: feelslike, precipitation: precipitation, weatherdescription: weatherdescription
     })
     }
 })}

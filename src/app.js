@@ -40,12 +40,12 @@ geocode(query.address,(error,{latitude,longitude,location} = {})=>{
     var _forecast;
 console.log('Getting Weather for: '+location);
    
-forecast(latitude+','+longitude,(error,{temperature,feelslike, precipitation}={})=>{
+forecast(latitude+','+longitude,(error,{temperature,feelslike, precipitation, weatherdescription}={})=>{
     if(error)
     {
     return res.send(error)
     }
-    _forecast = 'It is currently ' + temperature +' degrees out. It feels like '+ feelslike +' degrees' + ' and there is a '+  precipitation/100 + '% chance of rain.';
+    _forecast = 'It is currently ' + temperature +' degrees out. It feels like '+ feelslike +' degrees' + '. Overall the weather seems '+  weatherdescription + '.';
     
     return res.send({
         address: query.address,
