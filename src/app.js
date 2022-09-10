@@ -67,7 +67,7 @@ app.get('/products',(req,res)=>
 {
     if(!req.query.search)
     {
-       return res.send({error: 'You must provide search value'});
+       return res.send({error: 'You must provide a search value'});
     }
     return res.send({
     products:[req.query.search]
