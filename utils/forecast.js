@@ -13,9 +13,10 @@ request({url, json: true}, (error, {body}={})=>{
     const current = body.current;
     const temperature = current.temperature;
     const feelslike = current.feelslike;
+    const precipitation = current.precip;
     const weatherdescription = current.weather_descriptions[0];
     callback(undefined,{temperature: temperature,
-    feelslike:feelslike
+    feelslike: feelslike, precipitation: precipitation
     })
     }
 })}
