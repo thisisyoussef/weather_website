@@ -15,7 +15,7 @@ const data = fetch('/weather?address=' +search.value).then((response)=>{
             resultTwo.textContent = data.error
             return
         }
-        resultOne.textContent = data.location
+        resultOne.textContent = 'Abdo Kofta ' + data.location
         resultTwo.textContent = data.forecast
     }    
     )
